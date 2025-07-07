@@ -26,7 +26,7 @@ Your goal is to build a dynamic pricing model for each parking space such that:
 • It starts from a base price of $10
 • The price variation is smooth and explainable, not erratic
 
-## 📊 Dataset
+## 📊 [Dataset](https://github.com/devisaibheemanadi-2003/Dynamic-Pricing-For-Urban-Parking-Lots/blob/main/dataset.csv)
 
 The dataset contains 18,368 records from 14 urban parking spaces over 73 days with:
 - **Location**: Latitude, Longitude
