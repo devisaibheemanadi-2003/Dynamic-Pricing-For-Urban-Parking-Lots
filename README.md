@@ -1,18 +1,14 @@
-# Dynamic Pricing for Urban Parking Lots
+## 📄 Project Overview
 
-## 🚗 Project Overview
+**Title:** Dynamic Pricing for Urban Parking Lots
 
-This project implements an intelligent dynamic pricing system for urban parking lots as part of the Summer Analytics 2025 Capstone Project. The system uses real-time data to optimize parking prices based on demand, competition, and various environmental factors.
+**Goal:** To build a smart pricing engine that dynamically updates parking prices in urban areas based on real-time demand signals such as occupancy, queue length, traffic level, vehicle type, time, and location.
 
 ## 📋 Problem Statement
 
-Urban parking spaces are a limited and highly demanded resource. Prices that remain static
-throughout the day can lead to inefficiencies — either overcrowding or underutilization.
-To improve utilization, dynamic pricing based on demand, competition, and real-time
-conditions is crucial.
-This project simulates such a system: participants will create an intelligent, data-driven
-pricing engine for 14 parking spaces using real-time data streams, basic economic theory,
-and ML models built from scratch, using only numpy, pandas libraries.
+Urban parking faces imbalances in demand and pricing. Fixed pricing models result in either overutilized or underutilized lots. This project addresses this by building a real-time pricing model that adapts dynamically to changing demand factors.
+
+
 ## 🎯 Objectives
 
 Your goal is to build a dynamic pricing model for each parking space such that:
@@ -37,6 +33,45 @@ The dataset contains 18,368 records from 14 urban parking spaces over 73 days wi
 - **Traffic Conditions**: Low, average, high
 - **Special Days**: Holidays/events indicator
 - **Timestamps**: Date and time information
+  
+## ⚙️ Tech Stack Used
+**Category**	               **Tools / Libraries**
+
+**Programming**                       Python
+
+**Data Handling**                	pandas, numpy
+
+**Real-time Stream Processing**	        pathway
+
+**DateTime**	                      datetime, time
+
+**Visualization**	                  bokeh, matplotlib
+
+**Modeling Logic**	              Custom dynamic pricing function using rule-based logic
+
+**Output**	                      Bokeh interactive visualizations, PNG plots
+
+## 🧠 Architecture Diagram (Mermaid)
+graph TD
+    
+    A[Raw Parking Data (.csv)] --> B[Data Cleaning & Timestamp Merge (pandas)]
+    
+    B --> C[Streaming Table (Pathway)]
+    
+    C --> D[Apply Pricing Logic (Model 1, 2, 3)]
+    
+    D --> E[Dynamic Price Calculation]
+    
+    E --> F[Pathway Output Table]
+    
+    F --> G[Real-time Bokeh Line Plot]
+    
+    F --> H[Bar Plot for Nearby Lot Comparison]
+    
+    G --> I[Dashboard / Reporting]
+    
+    H --> I
+
 
 ## 🧠 Models Implemented
 ### Model 1: Baseline Linear Pricing
